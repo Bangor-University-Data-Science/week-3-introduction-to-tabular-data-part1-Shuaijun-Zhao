@@ -9,4 +9,12 @@ def display_unique_values(df, categorical_features):
     Returns:
         dict: A dictionary where keys are feature names and values are the unique values.
     """
-    pass  # Implement the logic here
+    unique_values = {}
+    for feature in categorical_features:
+        if feature in df:
+            unique_values[feature] = df[feature].unique()  # List of unique values for each categorical feature
+    return unique_values
+
+df = pd.read_csv('data/titanic.csv')
+categorical_features = df.select_dtypes(include=['object', 'category', 'bool']).columns.to_list()
+print (display_unique_values(df, categorical_features))
