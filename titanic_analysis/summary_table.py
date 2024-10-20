@@ -19,6 +19,6 @@ def create_summary_table(df):
     
     summary_df = pd.DataFrame(summary_data)
     return summary_df
-df = pd.read_csv('data/titanic.csv')
+df = pd.read_csv("data/titanic.csv")
 
 print (create_summary_table(df))

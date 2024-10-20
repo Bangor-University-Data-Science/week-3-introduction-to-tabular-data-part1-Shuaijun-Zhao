@@ -21,5 +21,5 @@ def create_feature_type_dict(df):
         }
     }
     return feature_types
-df = pd.read_csv('data/titanic.csv')
+df = pd.read_csv("data/titanic.csv")
 print(create_feature_type_dict(df))

@@ -13,6 +13,6 @@ def get_numerical_df(df, numerical_features):
         pd.DataFrame: DataFrame containing only numerical features.
     """
     return df[numerical_features]
-df = pd.read_csv('data/titanic.csv')
+df = pd.read_csv("data/titanic.csv")
 numerical_features = df.select_dtypes(include=['int64', 'float64']).columns.to_list()
 print(get_numerical_df(df, numerical_features))

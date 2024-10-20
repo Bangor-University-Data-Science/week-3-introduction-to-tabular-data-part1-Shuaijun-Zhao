@@ -17,6 +17,6 @@ def display_unique_values(df, categorical_features):
             unique_values[feature] = df[feature].unique()  # List of unique values for each categorical feature
     return unique_values
 
-df = pd.read_csv('data/titanic.csv')
+df = pd.read_csv("data/titanic.csv")
 categorical_features = df.select_dtypes(include=['object', 'category', 'bool']).columns.to_list()
 print (display_unique_values(df, categorical_features))
