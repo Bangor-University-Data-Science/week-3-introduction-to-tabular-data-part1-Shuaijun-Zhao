@@ -13,4 +13,4 @@ def load_titanic_data(filepath: str) -> pd.DataFrame:
     df = pd.read_csv(filepath)
     return df
 
-print (load_titanic_data('data/titanic.csv')) 
+print(load_titanic_data("data/titanic.csv")) 
