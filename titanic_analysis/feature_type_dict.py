@@ -1,3 +1,5 @@
+import pandas as pd
+
 def create_feature_type_dict(df):
     """
     Classifies features into numerical (continuous or discrete) and categorical (nominal or ordinal).
@@ -19,3 +21,5 @@ def create_feature_type_dict(df):
         }
     }
     return feature_types
+df = pd.read_csv('data/titanic.csv')
+print(create_feature_type_dict(df))
